@@ -16,23 +16,26 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #fff;
+$backgroundColor: transparent;
+$brandGray: #4a4a4a;
+$brandPink: #b7107c;
+$brandPurple: #3a0085;;
 
-$mainColor: #222;
-$headingColor: #222;
+$mainColor: $brandGray;
+$headingColor: $brandGray;
 
-$mainFontSize: 42px;
+$mainFontSize: 32px;
 $mainFont: 'Khula', Helvetica, sans-serif;
 $headingFont: 'Khula', Helvetica, sans-serif;
 $headingTextShadow: none;
-$headingLetterSpacing: normal;
+$headingLetterSpacing: 1px;
 $headingTextTransform: uppercase;
-$headingFontWeight: 800;
-$linkColor: #2a76dd;
+$headingFontWeight: 700;
+$linkColor: $brandPink;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
+$heading1Size: 2.3em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
@@ -52,4 +55,64 @@ section.has-dark-background {
   font-size: 0.6em;
   line-height: 1.2em;
   vertical-align: top; 
+}
+
+.reveal .element-outline {
+    border: 1px solid rgba($mainColor,0.3);
+}
+
+.reveal section img {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+// Intro Slide Style
+.style-intro {
+    background: darken($brandPink, 10%);
+    
+    section {
+        h1, h2, h3, h4, h5, h6 {
+            color: rgba( #fff, 0.75);
+        }
+
+        & {
+            color: #fff;
+        }
+    }
+}
+
+// Section Slide Style
+.style-section {
+    background: rgba($brandGray, 0.25);
+}
+
+// Exercise Slide Style
+.style-exercise {
+    background: $brandGray;
+    
+    section {
+        h1, h2, h3, h4, h5, h6 {
+            color: rgba( #fff, 0.75);
+        }
+
+        & {
+            color: #fff;
+        }
+    }
+}
+
+// Break Slide Style
+.style-break {
+    background: darken($brandPink, 10%);
+    
+    section {
+        h1, h2, h3, h4, h5, h6 {
+            color: rgba( #fff, 0.75);
+        }
+
+        & {
+            color: #fff;
+        }
+    }
 }
