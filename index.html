@@ -32,22 +32,39 @@
 
 						---
 
-						### Welcome to Philly Tech Sistas!
-						[TODO, notes about code of conduct, intro slides]
+						### While you’re waiting
+						- Wifi: username / password
+						- This Presentation: goo.l….
+						- Code Of Conduct: goo.l….
+						- Install the Tools: 
+						
+						<div>
+							<img src="img/chrome.png" alt="Chrome logo" width="200px" height="200px">
+							<img src="img/sublime-text.png" alt="Sublime Text logo" width="200px" height="200px">
+						</div>
 
 						---
 
 						### Introduce yourself
 						Let’s get to know each other a little better.
-						- What’s your name?
+						- What is your name? 
+						- What are your preferred pronouns?
 						- What do you hope to get out of this class?
-						- What is your favorite or dream vacation destination?
+						- Who are you most inspired by?
 
 						---
 
 						### By the end of this class...
 						You will have created your portfolio website!
 						![alt text](img/example-site-screenshot.png "Screenshot of example site")
+
+						---
+
+						### What we will go over
+						- What HTML is
+						- The History of HTML
+						- How to build a website
+						- Learn some foundational HTML elements
 
 						---
 
@@ -65,6 +82,7 @@
 						- 1997 - HTML 4
 						- 2000 - XHTML
 						- 2014 - HTML 5
+						- ? - What’s next for HTML 6 is [being discussed!](https://www.w3.org/wiki/HTML/next)
 
 						---
 
@@ -118,7 +136,7 @@
 						## Demo
 						Let’s take a look at [Philly Tech Sistas](https://www.phillytechsistas.org) under the hood.
 
-						We can go to our browser and right-click anywhere. Selecting the “Inspect option from the dropdown list to see some code!
+						We can go to our browser and right-click anywhere. Selecting the “Inspect” option from the dropdown list to see some code!
 
 						![alt text](img/pts-right-click.png "Screenshot of right-click on Philly Tech Sistas.")
 
@@ -129,7 +147,7 @@
 
 						<!-- .slide: class="style-exercise" -->
 
-						--
+						---
 
 						File names should not include spaces or special characters. They are also case sensitive. <!-- .element: class="small" -->
 
@@ -145,10 +163,6 @@
 
 						### Doctype
 						The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the page is using.
-
-						``` html
-						<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-						```
 
 						``` html
 						<!DOCTYPE html>
@@ -185,7 +199,7 @@
 						---
 
 						### Nesting
-						HTML is structured by nesting elements inside other elements. This is done by placing elements inside other containing tags.
+						HTML is structured by nesting elements inside other elements. This is done by placing elements inside other containing tags. 
 
 						For example, the `<p>` nested inside of the `<body>` tags is a “child” or a “descendent” of the body.
 
@@ -194,6 +208,9 @@
 							<p>A paragraph inside the body tag</p>
 						</body>
 						```
+
+						This is considered best practice, as it makes code more easily readable.
+						<!-- .element: class="small" -->
 
 						---
 
@@ -208,13 +225,27 @@
 
 						---
 
+						``` html
+						<!DOCTYPE html>
+						<html>
+							<head>
+								<title>Title of the page</title>
+							</head>
+							<body>
+								The page content here.
+							</body>
+						</html>
+						```
+
+						---
+
 						## HTML tags
+						1. Opening and closing tags
+						2. Self-closing tags
 
 						<!-- .slide: class="style-section" -->
 
 						---
-
-						### Anatomy of a tag
 
 						#### Opening and closing tags
 						Content must be contained within the opening tag and the closing tag. Note the `/` in the closing tag!
@@ -222,6 +253,8 @@
 						``` html
 						<p>This is some content.</p>
 						```
+
+						---
 
 						#### Self-closing tags
 						Some elements don’t need to contain content! Images and break elements are examples of this.
@@ -240,6 +273,10 @@
 						Attributes give more information about your element. Some are required for the element to work, such as the `src` and `alt` on the `<img>` tag. Some are optional.
 
 						![alt text](img/html-attributes.jpg "Screenshot highlighting attributes.")
+
+						Alt text is needed on image tags for accessibility and stands for “alternative text”.
+						<!-- .element: class="small" -->
+
 
 						---
 
@@ -298,40 +335,38 @@
 
 						---
 
-						### Exercise: Let’s add some content!
+						### Exercise
 						Introduce yourself on your website!
 
 						If you don’t know what to write, put in some [fun placeholder text!](https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/)
-
-						![alt text](img/example-site-screenshot.png)
 
 						<!-- .slide: class="style-exercise" -->
 
 						---
 
 						### Link types
-						Links can take users to another page, another web site, or a specific part of a page.
+						Links can take users to another web site, another page, or a specific part of a page.
 
-						1. Relative links
 						1. Absolute links
+						1. Relative links
 						1. Anchor links
 
 						---
 
-						#### 1. Relative links
-						The file path is relative to the `index.html` page’s location.
+						#### 1. Absolute links
+						The file path has to include the full url (most commonly used for external site links).
 
 						``` html
-						<a href="page.html">Link to a local page.</a>
+						<a href="http://mywebsite.com/page.html">Link to an external page.</a>
 						```
 
 						---
 
-						#### 2. Absolute links
-						The file path has to include the full url (most commonly used for external site links).
+						#### 2. Relative links
+						The file path is relative to the `index.html` page’s location.
 
 						``` html
-						<a href="http://google.com">Link to an external page.</a>
+						<a href="page.html">Link to a local page.</a>
 						```
 
 						---
@@ -342,6 +377,10 @@
 						``` html
 						<a href="#projects">Link to a section on the page.</a>
 						```
+
+						We will talk more about anchor links in the second half of the class!
+						<!-- .element: class="small" -->
+
 
 						---
 
@@ -400,40 +439,64 @@
 
 						---
 
-						### Exercise: Let’s add some content!
-						Let’s add an anchor navigation to our website. Don’t worry about where the links will go to for now. Add:
-						1. About
-						1. Projects
+						### Exercise
+						Let’s add an anchor navigation to our website. Don’t worry about where the links go for now:
+						1. About <!-- .element: class="small" -->
+						1. Projects <!-- .element: class="small" -->
+						1. Skills <!-- .element: class="small" -->
 
 						``` html
-						<header>
-							<nav>
-								<ul>
-									<li>
-										<a href="#about">About</a>
-									</li>
-									<li>
-										<a href="#projects">About</a>
-									</li>
-								</ul>
-							</nav>
-						</header>
+						<ul>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#projects">Projects</a>
+							</li>
+							<li>
+								<a href="#skills">Skills</a>
+							</li>
+						</ul>
 						```
-
-						![alt text](img/example-site-screenshot.png)
 
 						<!-- .slide: class="style-exercise" -->
 
 						---
 
 						### Header and nav elements
-						You may have noticed some new elements!
-
+						Since these links both help users navigate our website _and_ describe the content below, we will contain them in two new elements:
+						
 						#### `<header>`
-						The header element contains information relevant to the content below it.
+						This element contains information relevant to the content below it.
 
 						#### `<nav>`
 						This element contains navigation for your website.
+
+						---
+
+						### Exercise
+						Let’s make our site navigation more semantic. Contain the unordered list (and our site title!) in a `<header>` and `<nav>` element.
+
+						``` html
+						<header>
+							<h1>Title of your site</h1>
+							<nav>
+								<ul>
+									<li>
+										<a href="#about">About</a>
+									</li>
+									<li>
+										<a href="#projects">Projects</a>
+									</li>
+									<li>
+										<a href="#skills">Skill</a>
+									</li>
+								</ul>
+							</nav>
+						</header>
+						```
+
+						<!-- .slide: class="style-exercise" -->
 
 						---
 
@@ -441,7 +504,7 @@
 						The image tag has two required attributes: `src` and `alt`. You can use a relative link or link to any image on the internet with an absolute link.
 
 						``` html
-						<img src="image.jpg" height="300px" width="200px">
+						<img src="img/image.jpg" height="300px" width="200px">
 						```
 
 						``` html
@@ -455,8 +518,6 @@
 
 						If you didn’t bring a headshot to class, you can use [this website](https://placekitten.com/) to generate one!
 						<!-- .element: class="small" -->
-
-						![alt text](img/example-site-screenshot.png)
 
 						<!-- .slide: class="style-exercise" -->
 
@@ -478,6 +539,11 @@
 
 						---
 
+						### Non-semantic elements
+						`div` and `span` are called non-semantic elements. They don’t add any information for non-human readers. But they’re great when you only need to add styles!
+
+						---
+
 						### Divider
 						The `<div>` tag is a _block-level_ division or section in an HTML document. It can contain anything, but has no semantic value.
 
@@ -486,6 +552,8 @@
 							<p>Some content.</p>
 						</div>
 						```
+
+						<div style="background: gray; width: 100px; height: 100px; margin: 0 auto; font-size:20px; color: white;">I’m a div</div>
 
 						---
 
@@ -496,17 +564,15 @@
 						<p><span>Some</span> content.</p>
 						```
 
-						---
-
-						### Non-semantic elements
-						`div` and `span` are called non-semantic elements. They don’t add any information for non-human readers. But they’re great when you only need to add styles!
+						<span style="background: blue; font-size:20px; color: white;">I’m a span</div>
 
 						---
 
-						### Exercise: Let’s add some content!
-						We’re going to set up some placeholder projects. Start by adding 4 `<div>`’s to your website.
-
-						![alt text](img/example-site-screenshot.png)
+						### Exercise
+						We’re going to set up some placeholder projects. 
+						1. Add 4 empty `<div>`’s to your website. Nested within, add:
+						1. A placeholder *image* for each project 
+						1. A placeholder *heading* for each project
 
 						<!-- .slide: class="style-exercise" -->
 
@@ -527,6 +593,9 @@
 						</ul> -->
 						```
 
+						Hint: Select code you want to “comment out” and click `⌘ + /` (Mac) or `CTRL + /` (PC).
+						<!-- .element: class="small" -->
+
 						---
 
 						### Tables
@@ -543,38 +612,22 @@
 						<table>
 							<caption>Title of your table</caption>
 							<tr>
-								<th>Column header</th>
-								<th>Column header</th>
+								<th>Column header 1</th>
+								<th>Column header 2</th>
 							</tr>
 							<tr>
-								<td>Data</td>
-								<td>Data</td>
+								<td>Data 1</td>
+								<td>Data 2</td>
 							</tr>
 						</table>
 						```
 
 						---
 
-						### Exercise: Let’s add some content!
+						### Exercise
 						We’re going to add a table that contains some skills that you have, and your comfort level in that skill from 1-5.
 
-						![alt text](img/example-site-screenshot.png)
-
 						<!-- .slide: class="style-exercise" -->
-
-						---
-
-						### Other elements of interest
-						We’ve covered the basics to get you started, but there are many more elements available, some of which are very semantically useful:
-
-						- `<section>`
-						- `<article>`
-						- `<footer>`
-						- `<em>`
-						- `<strong>`
-
-						Check out a [complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for more info.
-						<!-- .element: class="small" -->
 
 						---
 
@@ -1447,6 +1500,21 @@
 						---
 
 						### Questions?
+
+						---
+
+						#### More learning
+						### Other HTML elements
+						We’ve covered the basics to get you started, but there are many more elements available!
+
+						- `<section>`
+						- `<article>`
+						- `<footer>`
+						- `<em>`
+						- `<strong>`
+
+						Check out a [complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for more info.
+						<!-- .element: class="small" -->
 
 					</script>
 				</section>
