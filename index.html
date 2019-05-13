@@ -154,7 +154,7 @@
 						<!DOCTYPE html>
 						```
 
-						This is _not_ case sensitive. You could write DOCTYPE, doctype or doCTypE. 
+						This is _not_ case sensitive. You could write DOCTYPE, doctype or doCTypE.
 						<!-- .element: class="small" -->
 
 						---
@@ -428,7 +428,7 @@
 
 						### Header and nav elements
 						You may have noticed some new elements!
-						
+
 						#### `<header>`
 						The header element contains information relevant to the content below it.
 
@@ -453,7 +453,7 @@
 						### Exercise: Let’s add some content!
 						Add your headshot to your website.
 
-						If you didn’t bring a headshot to class, you can use [this website](https://placekitten.com/) to generate one! 
+						If you didn’t bring a headshot to class, you can use [this website](https://placekitten.com/) to generate one!
 						<!-- .element: class="small" -->
 
 						![alt text](img/example-site-screenshot.png)
@@ -584,6 +584,29 @@
 
 						---
 
+						### Icebreaker time
+
+						Ultimate Rock Paper Scissors
+
+						<img src="img/rps.png" width="400"/>
+
+						---
+
+						### CSS
+
+						---
+
+						### What we will go over
+						- What is CSS?
+						- How to include CSS
+						- CSS syntax
+						- CSS properties
+						- Box model
+						- Display
+						- CSS positioning
+
+						---
+
 						### What is CSS?
 						- Cascading Style Sheets
 						- CSS describes how HTML elements are to be styled
@@ -610,7 +633,7 @@
 						---
 
 						### Internal
-						- An internal stylesheet holds the CSS code for the webpage in the head section of the particular file
+						- An internal stylesheet holds the CSS code for the webpage in the `<head>` section of the particular file
 						- Only affects the page the code is inserted into
 						- Not reuseable
 
@@ -634,7 +657,7 @@
 
 						``` html
 						<head>
-							<link rel="stylesheet" type="text/css" href="style.css">
+							<link rel="stylesheet" type="text/css" href="css/style.css">
 						</head>
 						```
 
@@ -648,6 +671,16 @@
 
 						---
 
+						### Solution
+
+						``` html
+						<head>
+							<link rel="stylesheet" type="text/css" href="css/style.css">
+						</head>
+						```
+
+						---
+
 						## CSS syntax
 
 						<!-- .slide: class="style-section" -->
@@ -658,12 +691,16 @@
 						- **Selector:** points to the HTML elements you want to style
 						- **Property:** indicates which stylistic features (e.g. font, width, background color) you want to change
 						- **Values:** Each property is given a value, which indicates how you want to change those stylistic features
-						- **Declaration:** includes a CSS property name and a value, separated by a colon
-						- **Declaration group:** is surrounded by curly brackets
+
+						![alt text](img/selector.gif)
+
 
 						---
 
 						### CSS syntax
+						- **Declaration:** includes a CSS property name and a value, separated by a colon
+						- **Declaration group:** is surrounded by curly brackets
+
 						![alt text](img/selector.gif)
 
 						---
@@ -706,6 +743,7 @@
 						### Class Selector
 						- The class selector selects elements with a specific class attribute
 						- Use a period (`.`) character, followed by the name of the class
+						- Can appear multiple times within a page, unlike id selectors which only appear once
 
 						``` css
 						.center {
@@ -731,6 +769,24 @@
 						- Descendent selectors (or descendent combinator) allow you to combine two or more selectors so you can be more specific
 						- Elements matched by the second selector are selected if they have an ancestor element matching the first selector
 						- This relationship is created with a space between selectors
+
+						``` css
+						ul li {
+							margin: 10px;
+						}
+						```
+
+						---
+
+						### Descendent selector
+
+						``` html
+							<ul>
+								<li>List item</li>
+								<li>List item</li>
+								<li>List item</li>
+							</ul>
+						```
 
 						``` css
 						ul li {
@@ -804,9 +860,11 @@
 						### Specificity
 						If two CSS selectors apply to the same element, the one with higher specificity wins. Under the hood, [there is a point system](https://medium.com/@frontendium/css-the-cascade-specificity-7f4ad354e58c).
 
-						![alt text](img/css-specificity-8-728.jpg)
+						<img src="img/css-specificity-8-728.jpg" width="500"/>
 
 						---
+
+						### Specificity
 
 						``` css
 						.better {
@@ -828,7 +886,7 @@
 						---
 
 						### Exercise
-						- Add unique ids to your about me, projects, resume, and contact sections of your `index.html`
+						- Add unique ids to your about me, projects, and skills sections of your `index.html`
 						- Add a shared class to your each of your project divs
 
 						<!-- .slide: class="style-exercise" -->
@@ -924,12 +982,12 @@
 						### font-size
 
 						- `font-size` sets the size of the font
+						- 12-14px is recommended for body text accessibility
 
 						``` css
 						p {
 							/* <length> values */
 							font-size: 12px;
-							font-size: 0.8em;
 
 							/* <percentage> values */
 							font-size: 80%;
@@ -945,7 +1003,7 @@
 
 						``` css
 						p {
-							font: italic bold 1.2em "Arial", sans-serif;
+							font: italic bold 12px "Arial", sans-serif;
 						}
 						```
 
@@ -953,7 +1011,7 @@
 						p {
 							font-style: italic;
 							font-weight: bold;
-							font-size: 1.2em;
+							font-size: 12px;
 							font-family: "Arial", sans-serif;
 						}
 						```
@@ -983,7 +1041,7 @@
 
 						### List of all CSS properties
 
-						https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+						https://css-tricks.com/almanac/properties/
 
 						---
 
@@ -1019,9 +1077,12 @@
 						- Using your color palette
 							- Set a color to your default link styles
 							- Set another color of your link’s hover state
-						- Apply a hover state to your projects so that your captions appears on hover
 
 						<!-- .slide: class="style-exercise" -->
+
+						---
+
+						### Break!
 
 						---
 
@@ -1045,12 +1106,12 @@
 						div {
 							padding-top: 50px;
 							padding-right: 30px;
-							padding-bottom: 50px;
+							padding-bottom: 60px;
 							padding-left: 80px;
 						}
 
 						div {
-							padding: 50px 30px 50px 80px;
+							padding: 50px 30px 60px 80px;
 						}
 						```
 
@@ -1058,7 +1119,8 @@
 
 						### Padding
 
-						![alt text](img/padding.png)
+						<img src="img/padding.png" width="400px">
+
 
 						---
 
@@ -1066,14 +1128,14 @@
 
 						``` css
 						div {
-							margin-top: 100px;
-							margin-right: 100px;
-							margin-bottom: 150px;
-							margin-left: 80px;
+							margin-top: 30px;
+							margin-right: 20px;
+							margin-bottom: 50px;
+							margin-left: 10px;
 						}
 
 						div {
-							margin: 100px 150px 100px 80px;
+							margin: 30px 20px 50px 10px;
 						}
 						```
 
@@ -1081,7 +1143,7 @@
 
 						### Margin
 
-						![alt text](img/margin.png)
+						<img src="img/margin.png" width="400px">
 
 						---
 
@@ -1121,14 +1183,21 @@
 
 						---
 
-						### Exercise
+						### Borders
 
-						- Try adding the following properties to your project divs
-							- Padding
-							- Margin
-							- Border
+						You can set the border to have various styles
 
-						<!-- .slide: class="style-exercise" -->
+						<img src="img/border-styles.png" width="400px">
+
+						``` css
+						p.dotted {border-style: dotted;}
+						p.dashed {border-style: dashed;}
+						p.solid {border-style: solid;}
+						p.double {border-style: double;}
+						```
+
+						https://www.w3schools.com/css/css_border.asp
+
 
 						---
 
@@ -1155,10 +1224,6 @@
 							- `<div>`
 							- `<h1> - <h6>`
 							- `<p>`
-							- `<form>`
-							- `<header>`
-							- `<footer>`
-							- `<section>`
 
 						---
 
@@ -1175,6 +1240,7 @@
 						### Display
 
 						- You can overwrite the default display value by using the `display` property
+						- This can be used if you want maintain semantic meaning but style it differently ie: horiziontal list
 
 						``` css
 						li {
@@ -1209,19 +1275,9 @@
 
 						---
 
-						### Other display values
-						Display has many other supported values in modern browsers, but aside from `flex`, which we’ll discuss later, block, inline, inline-block, and none, are the main ones.
-
-						---
-
 						### Exercise
 
-						- Create a new unordered list with 4 list elements
-							- About Me
-							- Projects
-							- Resume
-							- Contact
-						- Make the navigation line items appear horizontally by using `display: inline-block`
+						- Make your navigation line items appear horizontally by using `display: inline-block`
 
 						<!-- .slide: class="style-exercise" -->
 
@@ -1246,7 +1302,6 @@
 						### Static Position
 
 						- The element is positioned according to the normal flow of the document
-						- The top, right, bottom, left, and z-index properties have no effect
 						- This is the default value
 
 						``` css
@@ -1313,25 +1368,16 @@
 						### Exercise
 
 						- Inside each of your project divs
-							- Create a paragraph element with some text describing the project
-							- Position the paragraph so that it is absolutely positioned over the image
+							- Set `position: relative` to each of your project divs
+							- Position the nested paragraph so that it is absolutely positioned over the image
 
 						<!-- .slide: class="style-exercise" -->
 
 						---
 
-						### CSS layout features
-						In addition to being able to position individual elements in the “flow” of the page, there are also a few other layout features in modern CSS.
-
-						- Float
-						- Flex or “flexbox”
-						- CSS grid
-
-						---
-
 						### Float
 
-						- The `float` property is used to allow other content to flow around an element. Think of a big letter at the beginning of a book chapter
+						- The `float` property is used to allow other content to flow around an element.
 						- It can have the following values:
 							- left
 							- right
@@ -1376,9 +1422,11 @@
 
 						### Exercise
 
-						- Make projects float so there’s 4 projects in one row
+						- Use the `float` property to make each project sit in a row
+						- Apply `clear: both;` to skills section to move the skills section below the projects
 
-						![alt text](img/float-exercise.png)
+
+						![alt text](img/wocintech.png)
 
 						<!-- .slide: class="style-exercise" -->
 
@@ -1387,6 +1435,12 @@
 						### Exercise
 
 						- Use any remaining time to add structure to your portfolio page
+
+						<!-- .slide: class="style-exercise" -->
+
+						---
+
+						### Show & Tell!
 
 						<!-- .slide: class="style-exercise" -->
 
