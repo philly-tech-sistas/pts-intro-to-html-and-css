@@ -27,27 +27,49 @@
 			<div class="slides">
 				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
 					<script type="text/template">
+						#### PHILLY TECH SISTAS
 						# Intro to HTML/CSS
-						## Class 1
+						Class 1
+
+						<!-- .slide: data-state="style-intro" -->
 
 						---
 
-						### Welcome to Philly Tech Sistas!
-						[TODO, notes about code of conduct, intro slides]
+						### While you’re waiting
+						- **Wifi:** username / password
+						- **This Presentation:** goo.l….
+						- **Code Of Conduct:** goo.l….
+						- **Install the Tools:**
+						
+						<div>
+							<img src="img/chrome.png" alt="Chrome logo" width="150px" height="150px">
+							<img src="img/sublime-text.png" alt="Sublime Text logo" width="150px" height="150px">
+						</div>
 
 						---
 
 						### Introduce yourself
 						Let’s get to know each other a little better.
-						- What’s your name?
+						- What is your name? 
+						- What are your preferred pronouns?
 						- What do you hope to get out of this class?
-						- What is your favorite or dream vacation destination?
+						- Who are you most inspired by?
 
 						---
 
 						### By the end of this class...
 						You will have created your portfolio website!
-						![alt text](img/example-site-screenshot.png "Screenshot of example site")
+
+						<img src="img/example-site-screenshot.png" alt="Screenshot of example site" width="650px">
+						<!-- .element: class="element-outline" -->
+
+						---
+
+						### What we will go over
+						- What HTML is
+						- The History of HTML
+						- How to build a website
+						- Learn some foundational HTML elements
 
 						---
 
@@ -59,12 +81,13 @@
 						---
 
 						### The history of HTML
-						Tim Berners-Lee originally invented “hypertext” to share scientific papers.
-						- 1991 - First web page August 6, 1991
-						- 1994 - w3 Consortium formed (their goal is to standardize the web)
-						- 1997 - HTML 4
-						- 2000 - XHTML
-						- 2014 - HTML 5
+						Tim Berners-Lee invented “hypertext” to share scientific papers.
+						- **1991:** First web page August 6, 1991
+						- **1994:** w3 Consortium formed (their goal is to standardize the web)
+						- **1997:** HTML 4
+						- **2000:** XHTML
+						- **2014:** HTML 5
+						- **?:** What’s next for HTML 6 is [being discussed!](https://www.w3.org/wiki/HTML/next)
 
 						---
 
@@ -75,7 +98,7 @@
 
 						## Getting started
 
-						<!-- .slide: class="style-section" -->
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -94,8 +117,9 @@
 						We’ll be using Sublime Text in this class!
 
 						You can download it [here.](https://www.sublimetext.com/)
+						<!-- .element: class="small" -->
 
-						![alt text](img/sublime-text-screenshot.jpg "Screenshot of the Sublime Text 2 text editor.")
+						<img src="img/sublime-text-screenshot.jpg" alt="Screenshot of the Sublime Text 2 text editor." width="650px">
 
 						---
 
@@ -111,44 +135,41 @@
 						### 3. Developer Tools
 						All modern browsers give developers a toolkit to interact with the content on a page. You can do things like inspect loaded HTML, CSS and even see how long it took images to load.
 
-						![alt text](img/developer-tools.png "Chrome Developer Tools.")
+						<img src="img/developer-tools.png" alt="Chrome Developer Tools." width="450px">
 
 						---
 
 						## Demo
 						Let’s take a look at [Philly Tech Sistas](https://www.phillytechsistas.org) under the hood.
 
-						We can go to our browser and right-click anywhere. Selecting the “Inspect option from the dropdown list to see some code!
+						We can go to our browser and right-click anywhere. Selecting the “Inspect” option from the dropdown list to see some code!
 
-						![alt text](img/pts-right-click.png "Screenshot of right-click on Philly Tech Sistas.")
+						<img src="img/pts-right-click.png" alt="Screenshot of right-click on Philly Tech Sistas." width="750px">
+						<!-- .element: class="element-outline" -->
 
 						---
 
 						### Exercise: Let’s start our project!
 						We’ll start by creating a folder that will house all of your files. Anything that will appear on your site will go in this folder, including HTML files, CSS files, and images.
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
-						--
-
-						File names should not include spaces or special characters. They are also case sensitive. <!-- .element: class="small" -->
+						---
 
 						![alt text](img/site-files.png "An HTML site folder shown to contain an images folder, index.html and styles.css files.")
+
+						File names should not include spaces or special characters and are case sensitive. <!-- .element: class="small" -->
 
 						---
 
 						## Structure of an HTML page
 
-						<!-- .slide: class="style-section" -->
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
 						### Doctype
 						The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the page is using.
-
-						``` html
-						<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-						```
 
 						``` html
 						<!DOCTYPE html>
@@ -185,7 +206,7 @@
 						---
 
 						### Nesting
-						HTML is structured by nesting elements inside other elements. This is done by placing elements inside other containing tags.
+						HTML is structured by nesting elements inside other elements. This is done by placing elements inside other containing tags. 
 
 						For example, the `<p>` nested inside of the `<body>` tags is a “child” or a “descendent” of the body.
 
@@ -194,6 +215,9 @@
 							<p>A paragraph inside the body tag</p>
 						</body>
 						```
+
+						This is considered best practice, as it makes code more easily readable.
+						<!-- .element: class="small" -->
 
 						---
 
@@ -204,17 +228,29 @@
 						1. Add an html element
 						1. Nest a head and body element next to each other, inside the html
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
+
+						---
+
+						``` html
+						<!DOCTYPE html>
+						<html>
+							<head>
+								<title>Title of the page</title>
+							</head>
+							<body>
+								The page content here.
+							</body>
+						</html>
+						```
 
 						---
 
 						## HTML tags
-
-						<!-- .slide: class="style-section" -->
+						1. Opening and closing tags
+						2. Self-closing tags
 
 						---
-
-						### Anatomy of a tag
 
 						#### Opening and closing tags
 						Content must be contained within the opening tag and the closing tag. Note the `/` in the closing tag!
@@ -222,6 +258,8 @@
 						``` html
 						<p>This is some content.</p>
 						```
+
+						---
 
 						#### Self-closing tags
 						Some elements don’t need to contain content! Images and break elements are examples of this.
@@ -241,6 +279,10 @@
 
 						![alt text](img/html-attributes.jpg "Screenshot highlighting attributes.")
 
+						Alt text is needed on image tags for accessibility and stands for “alternative text”.
+						<!-- .element: class="small" -->
+
+
 						---
 
 						### Values
@@ -249,10 +291,17 @@
 						![alt text](img/html-values.png "Screenshot highlighting values in an image element.")
 
 						---
+						
+						## Break
+						When we return, we’ll talk about HTML elements!
+
+						<!-- .slide: data-state="style-break" -->
+
+						---
 
 						## Elements
 
-						<!-- .slide: class="style-section" -->
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -298,40 +347,38 @@
 
 						---
 
-						### Exercise: Let’s add some content!
+						### Exercise
 						Introduce yourself on your website!
 
 						If you don’t know what to write, put in some [fun placeholder text!](https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/)
 
-						![alt text](img/example-site-screenshot.png)
-
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### Link types
-						Links can take users to another page, another web site, or a specific part of a page.
+						Links can take users to another web site, another page, or a specific part of a page.
 
-						1. Relative links
 						1. Absolute links
+						1. Relative links
 						1. Anchor links
 
 						---
 
-						#### 1. Relative links
-						The file path is relative to the `index.html` page’s location.
+						#### 1. Absolute links
+						The file path has to include the full url (most commonly used for external site links).
 
 						``` html
-						<a href="page.html">Link to a local page.</a>
+						<a href="http://mywebsite.com/page.html">Link to an external page.</a>
 						```
 
 						---
 
-						#### 2. Absolute links
-						The file path has to include the full url (most commonly used for external site links).
+						#### 2. Relative links
+						The file path is relative to the `index.html` page’s location.
 
 						``` html
-						<a href="http://google.com">Link to an external page.</a>
+						<a href="page.html">Link to a local page.</a>
 						```
 
 						---
@@ -342,6 +389,10 @@
 						``` html
 						<a href="#projects">Link to a section on the page.</a>
 						```
+
+						We will talk more about anchor links in the second half of the class!
+						<!-- .element: class="small" -->
+
 
 						---
 
@@ -400,40 +451,64 @@
 
 						---
 
-						### Exercise: Let’s add some content!
-						Let’s add an anchor navigation to our website. Don’t worry about where the links will go to for now. Add:
-						1. About
-						1. Projects
+						### Exercise
+						Let’s add an anchor navigation to our website. Don’t worry about where the links go for now:
+						1. About <!-- .element: class="small" -->
+						1. Projects <!-- .element: class="small" -->
+						1. Skills <!-- .element: class="small" -->
+
+						``` html
+						<ul>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#projects">Projects</a>
+							</li>
+							<li>
+								<a href="#skills">Skills</a>
+							</li>
+						</ul>
+						```
+
+						<!-- .slide: data-state="style-exercise" -->
+
+						---
+
+						### Header and nav elements
+						Since these links both help users navigate our website _and_ describe the content below, we will contain them in two new elements:
+						
+						#### `<header>`
+						This element contains information relevant to the content below it.
+
+						#### `<nav>`
+						This element contains navigation for your website.
+
+						---
+
+						### Exercise
+						Let’s make our site navigation more semantic. Contain the unordered list (and our site title!) in a `<header>` and `<nav>` element.
 
 						``` html
 						<header>
+							<h1>Title of your site</h1>
 							<nav>
 								<ul>
 									<li>
 										<a href="#about">About</a>
 									</li>
 									<li>
-										<a href="#projects">About</a>
+										<a href="#projects">Projects</a>
+									</li>
+									<li>
+										<a href="#skills">Skill</a>
 									</li>
 								</ul>
 							</nav>
 						</header>
 						```
 
-						![alt text](img/example-site-screenshot.png)
-
-						<!-- .slide: class="style-exercise" -->
-
-						---
-
-						### Header and nav elements
-						You may have noticed some new elements!
-
-						#### `<header>`
-						The header element contains information relevant to the content below it.
-
-						#### `<nav>`
-						This element contains navigation for your website.
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -441,7 +516,7 @@
 						The image tag has two required attributes: `src` and `alt`. You can use a relative link or link to any image on the internet with an absolute link.
 
 						``` html
-						<img src="image.jpg" height="300px" width="200px">
+						<img src="img/image.jpg" height="300px" width="200px">
 						```
 
 						``` html
@@ -456,9 +531,7 @@
 						If you didn’t bring a headshot to class, you can use [this website](https://placekitten.com/) to generate one!
 						<!-- .element: class="small" -->
 
-						![alt text](img/example-site-screenshot.png)
-
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -478,6 +551,11 @@
 
 						---
 
+						### Non-semantic elements
+						`div` and `span` are called non-semantic elements. They don’t add any information for non-human readers. But they’re great when you only need to add styles!
+
+						---
+
 						### Divider
 						The `<div>` tag is a _block-level_ division or section in an HTML document. It can contain anything, but has no semantic value.
 
@@ -486,6 +564,8 @@
 							<p>Some content.</p>
 						</div>
 						```
+
+						<div style="background: gray; width: 100px; height: 100px; margin: 0 auto; font-size:20px; color: white;">I’m a div</div>
 
 						---
 
@@ -496,19 +576,17 @@
 						<p><span>Some</span> content.</p>
 						```
 
-						---
-
-						### Non-semantic elements
-						`div` and `span` are called non-semantic elements. They don’t add any information for non-human readers. But they’re great when you only need to add styles!
+						<span style="background: blue; font-size:20px; color: white;">I’m a span</div>
 
 						---
 
-						### Exercise: Let’s add some content!
-						We’re going to set up some placeholder projects. Start by adding 4 `<div>`’s to your website.
+						### Exercise
+						We’re going to set up some placeholder projects. 
+						1. Add 4 empty `<div>`’s to your website. Nested within, add:
+						1. A placeholder *image* for each project 
+						1. A placeholder *heading* for each project
 
-						![alt text](img/example-site-screenshot.png)
-
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -527,6 +605,9 @@
 						</ul> -->
 						```
 
+						Hint: Select code you want to “comment out” and click `⌘ + /` (Mac) or `CTRL + /` (PC).
+						<!-- .element: class="small" -->
+
 						---
 
 						### Tables
@@ -543,44 +624,29 @@
 						<table>
 							<caption>Title of your table</caption>
 							<tr>
-								<th>Column header</th>
-								<th>Column header</th>
+								<th>Column header 1</th>
+								<th>Column header 2</th>
 							</tr>
 							<tr>
-								<td>Data</td>
-								<td>Data</td>
+								<td>Data 1</td>
+								<td>Data 2</td>
 							</tr>
 						</table>
 						```
 
 						---
 
-						### Exercise: Let’s add some content!
+						### Exercise
 						We’re going to add a table that contains some skills that you have, and your comfort level in that skill from 1-5.
 
-						![alt text](img/example-site-screenshot.png)
-
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
-						### Other elements of interest
-						We’ve covered the basics to get you started, but there are many more elements available, some of which are very semantically useful:
+						## Break
+						When we come back, we’ll start talking about CSS!
 
-						- `<section>`
-						- `<article>`
-						- `<footer>`
-						- `<em>`
-						- `<strong>`
-
-						Check out a [complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for more info.
-						<!-- .element: class="small" -->
-
-						---
-
-						## Break!
-
-						<!-- .slide: class="style-break" -->
+						<!-- .slide: data-state="style-break" -->
 
 						---
 
@@ -593,6 +659,8 @@
 						---
 
 						### CSS
+
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -667,7 +735,7 @@
 						- Create a new CSS file called `style.css` inside your css folder
 						- Link to your css file inside your `index.html` file using the external stylesheet approach
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -683,7 +751,7 @@
 
 						## CSS syntax
 
-						<!-- .slide: class="style-section" -->
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -889,7 +957,7 @@
 						- Add unique ids to your about me, projects, and skills sections of your `index.html`
 						- Add a shared class to your each of your project divs
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -927,11 +995,12 @@
 						Backgroud Color: #hexvalue;
 						*/
 						```
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### CSS properties
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -1042,6 +1111,7 @@
 						### List of all CSS properties
 
 						https://css-tricks.com/almanac/properties/
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -1052,7 +1122,7 @@
 						- Change the font color and/or background color to various elements on your page
 						- Try using `font`, `font-family`, `font-size` and `text-align` on your page
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -1078,15 +1148,17 @@
 							- Set a color to your default link styles
 							- Set another color of your link’s hover state
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### Break!
+						<!-- .slide: data-state="style-break" -->
 
 						---
 
 						### Box model
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -1149,7 +1221,7 @@
 
 						### Margin
 
-						- You can also set margin to auto to horizontally center an element within its container
+						You can also set margin to auto to horizontally center an element within its container
 
 						``` css
 						div {
@@ -1164,7 +1236,7 @@
 
 						### Borders
 
-						- The `border` property allow you to specify the style, width, and color of an element's border
+						The `border` property allow you to specify the style, width, and color of an element's border
 
 						``` css
 						p {
@@ -1198,10 +1270,10 @@
 
 						https://www.w3schools.com/css/css_border.asp
 
-
 						---
 
 						### Display
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -1214,6 +1286,7 @@
 						---
 
 						A quick review...
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -1256,7 +1329,7 @@
 
 						### display: none
 
-						- Setting `display:none` hides an element so it’s not viewable on the page
+						Setting `display:none` hides an element so it’s not viewable on the page
 
 						``` css
 						.hidden {
@@ -1279,11 +1352,12 @@
 
 						- Make your navigation line items appear horizontally by using `display: inline-block`
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### CSS Positioning
+						<!-- .slide: data-state="style-section" -->
 
 						---
 
@@ -1371,7 +1445,7 @@
 							- Set `position: relative` to each of your project divs
 							- Position the nested paragraph so that it is absolutely positioned over the image
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
@@ -1404,7 +1478,7 @@
 
 						### Float - Clear
 
-						- The `clear` property sets whether an element must be moved below the floating elements that precede it
+						The `clear` property sets whether an element must be moved below the floating elements that precede it
 
 						``` css
 						.footer {
@@ -1428,25 +1502,57 @@
 
 						![alt text](img/wocintech.png)
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### Exercise
 
-						- Use any remaining time to add structure to your portfolio page
+						Use any remaining time to add structure to your portfolio page
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-exercise" -->
 
 						---
 
 						### Show & Tell!
 
-						<!-- .slide: class="style-exercise" -->
+						<!-- .slide: data-state="style-break" -->
 
 						---
 
 						### Questions?
+
+						---
+
+						#### More learning
+						### Other HTML elements
+						We’ve covered the basics to get you started, but there are many more elements available!
+
+						- `<section>`
+						- `<article>`
+						- `<footer>`
+						- `<em>`
+						- `<strong>`
+
+						Check out a [complete list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for more info.
+						<!-- .element: class="small" -->
+
+						---
+
+						#### More learning
+						### More layout options in CSS!
+						In addition to float, there are also a couple other layout features in modern CSS.
+
+						- Flex or "flexbox" [(Link)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+						- CSS Grid [(Link)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+
+						---
+
+						### Before you go...
+						Let us know how we’re doing!
+						[survey link]
+
+						<!-- .slide: data-state="style-break" -->
 
 					</script>
 				</section>
