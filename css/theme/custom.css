@@ -301,6 +301,10 @@ body {
     color: rgba(255, 255, 255, 0.75); }
   .style-exercise section {
     color: #fff; }
+  .style-exercise a {
+    color: #f26ec3; }
+    .style-exercise a:hover {
+      color: #f485cd; }
 
 .style-break {
   background: #880c5c; }
