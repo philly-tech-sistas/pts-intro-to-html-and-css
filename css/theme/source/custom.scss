@@ -24,7 +24,7 @@ $brandPurple: #3a0085;;
 $mainColor: $brandGray;
 $headingColor: $brandGray;
 
-$mainFontSize: 32px;
+$mainFontSize: 42px;
 $mainFont: 'Khula', Helvetica, sans-serif;
 $headingFont: 'Khula', Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -44,6 +44,10 @@ section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 	}
+}
+
+pre {
+    font-size: 0.75em!important;
 }
 
 
