@@ -291,6 +291,10 @@ body {
     color: rgba(255, 255, 255, 0.75); }
   .style-intro section {
     color: #fff; }
+  .style-intro a {
+    color: white; }
+    .style-intro a:hover {
+      color: #f485cd; }
 
 .style-section {
   background: rgba(74, 74, 74, 0.25); }
@@ -312,3 +316,7 @@ body {
     color: rgba(255, 255, 255, 0.75); }
   .style-break section {
     color: #fff; }
+  .style-break a {
+    color: #f26ec3; }
+    .style-break a:hover {
+      color: #f485cd; }
