@@ -80,6 +80,14 @@ section.has-dark-background {
             color: #fff;
         }
     }
+
+    a {
+        color: lighten($linkColor, 100%);
+
+        &:hover {
+            color: lighten($linkColorHover, 20%);
+        }
+    }
 }
 
 // Section Slide Style
@@ -121,6 +129,14 @@ section.has-dark-background {
 
         & {
             color: #fff;
+        }
+    }
+
+    a {
+        color: lighten($linkColor,30%);
+
+        &:hover {
+            color: lighten($linkColorHover, 20%);
         }
     }
 }
